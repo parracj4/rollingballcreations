@@ -40,9 +40,9 @@
 }
 
 @layer components {
-  /* Glassmorphism base */
+  /* Glassmorphism base - reduced blur on mobile for performance */
   .glass {
-    @apply bg-white/5 backdrop-blur-xl border border-white/10 shadow-glass;
+    @apply bg-white/5 backdrop-blur-md md:backdrop-blur-xl border border-white/10 shadow-glass;
   }
 
   .glass-hover {
@@ -73,10 +73,17 @@
     background-size: 200% auto;
   }
 
-  /* Animated gradient background orbs */
+  /* Animated gradient background orbs - reduced blur on mobile */
   .gradient-orb {
-    @apply absolute rounded-full blur-3xl opacity-50;
+    @apply absolute rounded-full blur-2xl md:blur-3xl opacity-50;
     animation: float 6s ease-in-out infinite;
+  }
+
+  /* Disable animations for users who prefer reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .gradient-orb {
+      animation: none;
+    }
   }
 
   /* Section styling */

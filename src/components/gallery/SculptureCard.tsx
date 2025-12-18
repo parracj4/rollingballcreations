@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import { GlassCard, Badge } from '@/components/ui'
@@ -15,11 +14,9 @@ export function SculptureCard({ sculpture, index = 0 }: SculptureCardProps) {
   const isAvailable = sculpture.status === 'available'
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-50px' }}
-      transition={{ delay: index * 0.05, duration: 0.5 }}
+    <div
+      className="animate-fadeIn"
+      style={{ animationDelay: `${index * 50}ms` }}
     >
       <Link href={`/gallery/${sculpture.slug}`}>
         <GlassCard className="group overflow-hidden p-0 h-full">
@@ -32,6 +29,8 @@ export function SculptureCard({ sculpture, index = 0 }: SculptureCardProps) {
                 fill
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 className="object-cover transition-transform duration-500 group-hover:scale-110"
+                loading={index < 4 ? 'eager' : 'lazy'}
+                priority={index < 2}
               />
             ) : (
               <div className="w-full h-full flex items-center justify-center">
@@ -107,6 +106,6 @@ export function SculptureCard({ sculpture, index = 0 }: SculptureCardProps) {
           </div>
         </GlassCard>
       </Link>
-    </motion.div>
+    </div>
   )
 }
