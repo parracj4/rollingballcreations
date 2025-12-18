@@ -50,7 +50,7 @@ export const sculptures: Sculpture[] = [
     description: 'This wine bottle holder is hand-built by Jon using a rustic butcher block base. Perfect for a kitchen centerpiece or dining room conversation-starter.',
     dimensions: { width: 13, height: 11, depth: 10, unit: 'inches' },
     material: 'Raw Copper',
-    images: ['/images/products/DSC00396-wine-holder.jpg'],
+    images: ['/images/products/DSC00396-wine-holder.webp'],
   },
   {
     id: 'powder-coated-18x16x12',
@@ -63,7 +63,7 @@ export const sculptures: Sculpture[] = [
     description: 'One of a kind custom rolling ball sculpture art for your home or business. Powder coated finish for durability and style.',
     dimensions: { width: 18, height: 16, depth: 12, unit: 'inches' },
     material: 'Powder Coated',
-    images: ['/images/products/DSC00401-powder-coated.jpg'],
+    images: ['/images/products/DSC00401-powder-coated.webp'],
   },
   {
     id: 'wall-mount-round-24',
@@ -78,7 +78,7 @@ export const sculptures: Sculpture[] = [
     material: 'Raw Stainless',
     type: 'wall-mount',
     features: ['automatic marble launching', 'push rod mechanism'],
-    images: ['/images/products/DSC00403-wall-mount-round.jpg'],
+    images: ['/images/products/DSC00403-wall-mount-round.webp'],
   },
   {
     id: 'motorcycle-sprocket-16x14x8',
@@ -92,7 +92,7 @@ export const sculptures: Sculpture[] = [
     dimensions: { width: 16, height: 14, depth: 8, unit: 'inches' },
     material: 'Raw Stainless',
     features: ['motorcycle sprocket base', 'stainless steel track'],
-    images: ['/images/products/DSC00398-motorcycle-sprocket.jpg'],
+    images: ['/images/products/DSC00398-motorcycle-sprocket.webp'],
   },
   {
     id: 'large-motorized-40x37x13',
@@ -115,7 +115,7 @@ export const sculptures: Sculpture[] = [
       'aluminum core helical lift',
       '~6 marbles per minute',
     ],
-    images: ['/images/products/DSC00389-large-motorized.jpg'],
+    images: ['/images/products/DSC00389-large-motorized.webp'],
   },
 
   // SOLD
@@ -143,7 +143,7 @@ export const sculptures: Sculpture[] = [
     description: 'Custom rolling ball sculpture - one of a kind art piece.',
     dimensions: { width: 13, height: 20, depth: 12, unit: 'inches' },
     material: 'Raw Stainless',
-    images: ['/images/products/DSC00400-sold-raw-stainless.jpg'],
+    images: ['/images/products/DSC00400-sold-raw-stainless.webp'],
   },
   {
     id: 'sold-powder-coated-41x14x6',
@@ -156,7 +156,7 @@ export const sculptures: Sculpture[] = [
     description: 'Custom rolling ball sculpture - one of a kind art piece.',
     dimensions: { width: 41, height: 14, depth: 6, unit: 'inches' },
     material: 'Powder Coated',
-    images: ['/images/products/DSC00408-sold-powder-coated.jpg'],
+    images: ['/images/products/DSC00408-sold-powder-coated.webp'],
   },
   {
     id: 'sold-wall-mount-22x20x5',
@@ -170,7 +170,7 @@ export const sculptures: Sculpture[] = [
     dimensions: { width: 22, height: 20, depth: 5, unit: 'inches' },
     material: 'Raw Stainless',
     type: 'wall-mount',
-    images: ['/images/products/DSC00405-sold-wall-mount.jpg'],
+    images: ['/images/products/DSC00405-sold-wall-mount.webp'],
   },
   {
     id: 'sold-copper-20x20x36',
@@ -183,7 +183,7 @@ export const sculptures: Sculpture[] = [
     description: 'Custom rolling ball sculpture - one of a kind art piece.',
     dimensions: { width: 20, height: 20, depth: 36, unit: 'inches' },
     material: 'Raw Copper',
-    images: ['/images/products/IMG_4370-copper-sculpture.jpg'],
+    images: ['/images/products/IMG_4370-copper-sculpture.webp'],
   },
   {
     id: 'sold-polished-stainless-30x22x6',
@@ -196,7 +196,7 @@ export const sculptures: Sculpture[] = [
     description: 'Custom rolling ball sculpture - one of a kind art piece.',
     dimensions: { width: 30, height: 22, depth: 6, unit: 'inches' },
     material: 'Polished Stainless',
-    images: ['/images/products/AB-Machine-polished-stainless.jpg'],
+    images: ['/images/products/AB-Machine-polished-stainless.webp'],
   },
   {
     id: 'sold-wall-mount-27x14x5',
@@ -210,7 +210,7 @@ export const sculptures: Sculpture[] = [
     dimensions: { width: 27, height: 14, depth: 5, unit: 'inches' },
     material: 'Raw Stainless',
     type: 'wall-mount',
-    images: ['/images/products/Med-Wall-Mount.jpg'],
+    images: ['/images/products/Med-Wall-Mount.webp'],
   },
   {
     id: 'sold-wall-mount-20x13x5',
@@ -224,7 +224,7 @@ export const sculptures: Sculpture[] = [
     dimensions: { width: 20, height: 13, depth: 5, unit: 'inches' },
     material: 'Raw Stainless',
     type: 'wall-mount',
-    images: ['/images/products/Small-Stainless-Wall-Mount.jpg'],
+    images: ['/images/products/Small-Stainless-Wall-Mount.webp'],
   },
 ]
 
