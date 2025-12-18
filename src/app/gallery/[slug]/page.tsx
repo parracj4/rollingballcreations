@@ -4,7 +4,7 @@ import { sculptures, getSculptureBySlug } from '@/lib/data'
 import { SculptureDetail } from './SculptureDetail'
 
 interface Props {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }
 
 export async function generateStaticParams() {
@@ -14,7 +14,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const sculpture = getSculptureBySlug(params.slug)
+  const { slug } = await params
+  const sculpture = getSculptureBySlug(slug)
 
   if (!sculpture) {
     return {
@@ -42,8 +43,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-export default function SculptureDetailPage({ params }: Props) {
-  const sculpture = getSculptureBySlug(params.slug)
+export default async function SculptureDetailPage({ params }: Props) {
+  const { slug } = await params
+  const sculpture = getSculptureBySlug(slug)
 
   if (!sculpture) {
     notFound()
