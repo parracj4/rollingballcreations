@@ -43,3 +43,6 @@ next-env.d.ts
 # Old assets (we've moved them to public)
 /assets
 /content
+
+.vercel
+.env*.local
