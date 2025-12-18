@@ -1,89 +1,9 @@
 'use client'
 
-import { useState, useEffect, useCallback } from 'react'
-import { GlassCard, GlassButton, GlassInput, GlassTextarea, AnimatedGradient } from '@/components/ui'
+import { GlassCard, GlassButton, AnimatedGradient } from '@/components/ui'
 import { siteContent } from '@/lib/data'
 
-declare global {
-  interface Window {
-    grecaptcha: {
-      ready: (callback: () => void) => void
-      execute: (siteKey: string, options: { action: string }) => Promise<string>
-    }
-  }
-}
-
-const RECAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''
-
 export function ContactContent() {
-  const [formState, setFormState] = useState({ name: '', email: '', subject: '', message: '' })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSubmitted, setIsSubmitted] = useState(false)
-  const [error, setError] = useState('')
-
-  useEffect(() => {
-    // Load reCAPTCHA v3 script
-    const script = document.createElement('script')
-    script.src = `https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_SITE_KEY}`
-    script.async = true
-    document.head.appendChild(script)
-
-    return () => {
-      // Cleanup script on unmount
-      const existingScript = document.querySelector(`script[src*="recaptcha"]`)
-      if (existingScript) {
-        existingScript.remove()
-      }
-      // Remove reCAPTCHA badge
-      const badge = document.querySelector('.grecaptcha-badge')
-      if (badge) {
-        badge.remove()
-      }
-    }
-  }, [])
-
-  const handleSubmit = useCallback(async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    setError('')
-
-    try {
-      // Get reCAPTCHA token
-      const token = await new Promise<string>((resolve, reject) => {
-        if (!window.grecaptcha) {
-          reject(new Error('reCAPTCHA not loaded'))
-          return
-        }
-        window.grecaptcha.ready(() => {
-          window.grecaptcha
-            .execute(RECAPTCHA_SITE_KEY, { action: 'contact' })
-            .then(resolve)
-            .catch(reject)
-        })
-      })
-
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          ...formState,
-          recaptchaToken: token,
-        }),
-      })
-
-      if (!response.ok) {
-        const data = await response.json()
-        throw new Error(data.error || 'Failed to send message')
-      }
-
-      setIsSubmitted(true)
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'Something went wrong. Please try again.')
-    } finally {
-      setIsSubmitting(false)
-    }
-  }, [formState])
-
   return (
     <div className="min-h-screen pt-32 pb-20">
       <section className="relative overflow-hidden mb-16">
@@ -105,42 +25,14 @@ export function ContactContent() {
       <div className="container-custom">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
-            <GlassCard className="p-8" hover={false}>
-              {isSubmitted ? (
-                <div className="text-center py-12">
-                  <div className="text-6xl mb-4">✨</div>
-                  <h2 className="text-2xl font-bold text-white mb-2">Message Sent!</h2>
-                  <p className="text-text-secondary mb-6">Thank you for reaching out. Jon will get back to you as soon as possible.</p>
-                  <GlassButton onClick={() => { setIsSubmitted(false); setFormState({ name: '', email: '', subject: '', message: '' }) }} variant="outline">
-                    Send Another Message
-                  </GlassButton>
-                </div>
-              ) : (
-                <>
-                  <h2 className="text-2xl font-bold text-white mb-6">Send a Message</h2>
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    {error && (
-                      <div className="p-4 rounded-lg bg-red-500/10 border border-red-500/20 text-red-400 text-sm">
-                        {error}
-                      </div>
-                    )}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                      <GlassInput id="name" label="Your Name" placeholder="John Doe" value={formState.name} onChange={(e) => setFormState({ ...formState, name: e.target.value })} required />
-                      <GlassInput id="email" type="email" label="Email Address" placeholder="john@example.com" value={formState.email} onChange={(e) => setFormState({ ...formState, email: e.target.value })} required />
-                    </div>
-                    <GlassInput id="subject" label="Subject" placeholder="Custom Commission Inquiry" value={formState.subject} onChange={(e) => setFormState({ ...formState, subject: e.target.value })} required />
-                    <GlassTextarea id="message" label="Message" placeholder="Tell us about your vision..." value={formState.message} onChange={(e) => setFormState({ ...formState, message: e.target.value })} required rows={6} />
-                    <GlassButton type="submit" variant="primary" size="lg" className="w-full" disabled={isSubmitting}>
-                      {isSubmitting ? 'Sending...' : 'Send Message'}
-                    </GlassButton>
-                    <p className="text-text-muted text-xs text-center">
-                      This site is protected by reCAPTCHA and the Google{' '}
-                      <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="underline hover:text-white">Privacy Policy</a> and{' '}
-                      <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className="underline hover:text-white">Terms of Service</a> apply.
-                    </p>
-                  </form>
-                </>
-              )}
+            <GlassCard className="p-0 overflow-hidden" hover={false}>
+              <iframe
+                aria-label="Send us a message"
+                frameBorder="0"
+                style={{ height: '500px', width: '100%', border: 'none' }}
+                src="https://forms.piawv.com/parrackinsurance/form/SendusamessageRollingBallCreations/formperma/SR6dX1qry_r32wXv5XTHHJRJscgbefokqtfER2RWs7I"
+                title="Contact Form"
+              />
             </GlassCard>
           </div>
 
