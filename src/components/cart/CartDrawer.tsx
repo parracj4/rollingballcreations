@@ -68,6 +68,7 @@ export function CartDrawer() {
                         fill
                         sizes="80px"
                         className="object-cover"
+                        loading="lazy"
                       />
                     ) : (
                       <div className="w-full h-full bg-surface flex items-center justify-center">

@@ -84,6 +84,7 @@ export function CheckoutContent() {
                         fill
                         sizes="128px"
                         className="object-cover"
+                        loading="lazy"
                       />
                     ) : (
                       <div className="w-full h-full bg-surface flex items-center justify-center">

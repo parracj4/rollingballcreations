@@ -29,8 +29,7 @@ export function SculptureCard({ sculpture, index = 0 }: SculptureCardProps) {
                 fill
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 className="object-cover transition-transform duration-500 group-hover:scale-110"
-                loading={index < 4 ? 'eager' : 'lazy'}
-                priority={index < 2}
+                loading="lazy"
               />
             ) : (
               <div className="w-full h-full flex items-center justify-center">

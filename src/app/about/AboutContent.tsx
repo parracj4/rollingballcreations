@@ -58,6 +58,7 @@ export function AboutContent() {
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
+                loading="lazy"
               />
               <div className="absolute inset-0 border border-white/10 rounded-3xl" />
             </div>

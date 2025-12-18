@@ -94,6 +94,7 @@ export function SculptureDetail({ sculpture, related }: SculptureDetailProps) {
                       fill
                       sizes="80px"
                       className="object-cover"
+                      loading="lazy"
                     />
                   </button>
                 ))}
