@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import { GlassCard, GlassButton, Badge } from '@/components/ui'
@@ -13,12 +12,7 @@ export function FeaturedSculptures() {
     <section className="section bg-surface/30">
       <div className="container-custom">
         {/* Section Header */}
-        <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
+        <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
             Featured Sculptures
           </h2>
@@ -26,17 +20,15 @@ export function FeaturedSculptures() {
             Each piece is a unique work of art, meticulously handcrafted to
             bring kinetic wonder into your space.
           </p>
-        </motion.div>
+        </div>
 
         {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {featured.map((sculpture, index) => (
-            <motion.div
+            <div
               key={sculpture.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
+              className="animate-fadeIn"
+              style={{ animationDelay: `${index * 100}ms` }}
             >
               <Link href={`/gallery/${sculpture.slug}`}>
                 <GlassCard className="group overflow-hidden p-0">
@@ -47,7 +39,9 @@ export function FeaturedSculptures() {
                         src={sculpture.images[0]}
                         alt={sculpture.name}
                         fill
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                         className="object-cover transition-transform duration-500 group-hover:scale-110"
+                        priority={index < 2}
                       />
                     ) : (
                       <div className="w-full h-full bg-surface flex items-center justify-center">
@@ -82,21 +76,16 @@ export function FeaturedSculptures() {
                   </div>
                 </GlassCard>
               </Link>
-            </motion.div>
+            </div>
           ))}
         </div>
 
         {/* CTA */}
-        <motion.div
-          className="text-center mt-12"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-        >
+        <div className="text-center mt-12">
           <GlassButton href="/gallery" variant="outline" size="lg">
             View All Sculptures
           </GlassButton>
-        </motion.div>
+        </div>
       </div>
     </section>
   )

@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useMemo } from 'react'
-import { motion } from 'framer-motion'
 import { SculptureCard, GalleryFilters } from '@/components/gallery'
 import { sculptures } from '@/lib/data'
 
@@ -30,11 +29,7 @@ export default function GalleryPage() {
     <div className="min-h-screen pt-32 pb-20">
       <div className="container-custom">
         {/* Header */}
-        <motion.div
-          className="text-center mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-        >
+        <div className="text-center mb-12">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4">
             Gallery
           </h1>
@@ -42,7 +37,7 @@ export default function GalleryPage() {
             Explore our collection of handcrafted rolling ball sculptures. Each
             piece is unique, built with precision and designed to captivate.
           </p>
-        </motion.div>
+        </div>
 
         {/* Filters */}
         <GalleryFilters
@@ -51,21 +46,13 @@ export default function GalleryPage() {
         />
 
         {/* Results count */}
-        <motion.p
-          className="text-text-muted text-center mb-8"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          key={activeFilter}
-        >
+        <p className="text-text-muted text-center mb-8">
           Showing {sortedSculptures.length} sculpture
           {sortedSculptures.length !== 1 ? 's' : ''}
-        </motion.p>
+        </p>
 
         {/* Grid */}
-        <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
-          layout
-        >
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {sortedSculptures.map((sculpture, index) => (
             <SculptureCard
               key={sculpture.id}
@@ -73,21 +60,17 @@ export default function GalleryPage() {
               index={index}
             />
           ))}
-        </motion.div>
+        </div>
 
         {/* Empty State */}
         {sortedSculptures.length === 0 && (
-          <motion.div
-            className="text-center py-20"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-          >
+          <div className="text-center py-20">
             <div className="text-6xl mb-4">🔍</div>
             <h3 className="text-xl text-white mb-2">No sculptures found</h3>
             <p className="text-text-muted">
               Try adjusting your filters to see more results.
             </p>
-          </motion.div>
+          </div>
         )}
       </div>
     </div>

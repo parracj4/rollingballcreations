@@ -1,6 +1,5 @@
 'use client'
 
-import { motion, AnimatePresence } from 'framer-motion'
 import { useCart } from '@/lib/cart-context'
 
 export function CartButton() {
@@ -27,18 +26,11 @@ export function CartButton() {
       </svg>
 
       {/* Badge */}
-      <AnimatePresence>
-        {cartCount > 0 && (
-          <motion.span
-            className="absolute -top-1 -right-1 w-5 h-5 bg-primary rounded-full text-white text-xs flex items-center justify-center font-bold"
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            exit={{ scale: 0 }}
-          >
-            {cartCount}
-          </motion.span>
-        )}
-      </AnimatePresence>
+      {cartCount > 0 && (
+        <span className="absolute -top-1 -right-1 w-5 h-5 bg-primary rounded-full text-white text-xs flex items-center justify-center font-bold">
+          {cartCount}
+        </span>
+      )}
     </button>
   )
 }

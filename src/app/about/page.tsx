@@ -1,8 +1,4 @@
 import { Metadata } from 'next'
-import { motion } from 'framer-motion'
-import Image from 'next/image'
-import { GlassCard, GlassButton, AnimatedGradient } from '@/components/ui'
-import { siteContent } from '@/lib/data'
 import { AboutContent } from './AboutContent'
 
 export const metadata: Metadata = {

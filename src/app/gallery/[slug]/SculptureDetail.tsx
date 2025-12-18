@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import { GlassCard, GlassButton, Badge } from '@/components/ui'
@@ -21,11 +20,7 @@ export function SculptureDetail({ sculpture, related }: SculptureDetailProps) {
     <div className="min-h-screen pt-32 pb-20">
       <div className="container-custom">
         {/* Breadcrumb */}
-        <motion.nav
-          className="mb-8"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-        >
+        <nav className="mb-8">
           <ol className="flex items-center gap-2 text-sm text-text-muted">
             <li>
               <Link href="/" className="hover:text-white transition-colors">
@@ -44,14 +39,11 @@ export function SculptureDetail({ sculpture, related }: SculptureDetailProps) {
             <li>/</li>
             <li className="text-text-secondary">{sculpture.material}</li>
           </ol>
-        </motion.nav>
+        </nav>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Image Section */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-          >
+          <div>
             {/* Main Image */}
             <div className="relative aspect-square rounded-3xl overflow-hidden glass mb-4">
               {sculpture.images[selectedImage] ? (
@@ -59,6 +51,7 @@ export function SculptureDetail({ sculpture, related }: SculptureDetailProps) {
                   src={sculpture.images[selectedImage]}
                   alt={sculpture.name}
                   fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover"
                   priority
                 />
@@ -99,20 +92,17 @@ export function SculptureDetail({ sculpture, related }: SculptureDetailProps) {
                       src={image}
                       alt={`${sculpture.name} - Image ${index + 1}`}
                       fill
+                      sizes="80px"
                       className="object-cover"
                     />
                   </button>
                 ))}
               </div>
             )}
-          </motion.div>
+          </div>
 
           {/* Details Section */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.1 }}
-          >
+          <div>
             {/* Category */}
             <p className="text-primary uppercase tracking-wider text-sm mb-2">
               {sculpture.category.replace('-', ' ')} •{' '}
@@ -241,17 +231,12 @@ export function SculptureDetail({ sculpture, related }: SculptureDetailProps) {
                 </span>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
 
         {/* Related Sculptures */}
         {related.length > 0 && (
-          <motion.section
-            className="mt-24"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
+          <section className="mt-24">
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-8">
               Related Sculptures
             </h2>
@@ -264,7 +249,7 @@ export function SculptureDetail({ sculpture, related }: SculptureDetailProps) {
                 />
               ))}
             </div>
-          </motion.section>
+          </section>
         )}
       </div>
     </div>

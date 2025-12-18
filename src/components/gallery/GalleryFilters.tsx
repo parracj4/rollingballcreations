@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import { cn } from '@/lib/utils'
 
 interface FilterOption {
@@ -29,7 +28,7 @@ export function GalleryFilters({
   return (
     <div className="flex flex-wrap justify-center gap-2 mb-12">
       {filters.map((filter) => (
-        <motion.button
+        <button
           key={filter.value}
           onClick={() => onFilterChange(filter.value)}
           className={cn(
@@ -38,11 +37,9 @@ export function GalleryFilters({
               ? 'bg-primary text-white'
               : 'glass text-text-secondary hover:text-white hover:bg-white/10'
           )}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
         >
           {filter.label}
-        </motion.button>
+        </button>
       ))}
     </div>
   )

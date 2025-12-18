@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import { GlassCard, GlassButton } from '@/components/ui'
 import { siteContent } from '@/lib/data'
 
@@ -13,12 +12,7 @@ export function ProcessPreview() {
     <section className="section bg-surface/30">
       <div className="container-custom">
         {/* Section Header */}
-        <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
+        <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
             The Creation Process
           </h2>
@@ -26,7 +20,7 @@ export function ProcessPreview() {
             From initial consultation to final delivery, every sculpture is a
             collaborative journey.
           </p>
-        </motion.div>
+        </div>
 
         {/* Steps */}
         <div className="relative">
@@ -35,12 +29,10 @@ export function ProcessPreview() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
             {steps.map((step, index) => (
-              <motion.div
+              <div
                 key={step.number}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
+                className="animate-fadeIn"
+                style={{ animationDelay: `${index * 100}ms` }}
               >
                 <GlassCard className="text-center h-full relative">
                   {/* Step Number */}
@@ -61,22 +53,17 @@ export function ProcessPreview() {
                     {step.description.slice(0, 80)}...
                   </p>
                 </GlassCard>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
 
         {/* CTA */}
-        <motion.div
-          className="text-center mt-12"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-        >
+        <div className="text-center mt-12">
           <GlassButton href="/process" variant="outline">
             View Full Process
           </GlassButton>
-        </motion.div>
+        </div>
       </div>
     </section>
   )
