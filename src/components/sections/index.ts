@@ -1,0 +1,5 @@
+export { Hero } from './Hero'
+export { FeaturedSculptures } from './FeaturedSculptures'
+export { AboutPreview } from './AboutPreview'
+export { ProcessPreview } from './ProcessPreview'
+export { CTASection } from './CTASection'
