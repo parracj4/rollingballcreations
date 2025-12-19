@@ -15,6 +15,36 @@ const videos = [
     description: 'Watch the mesmerizing flow of marbles through this handcrafted kinetic sculpture.',
     isShort: true,
   },
+  {
+    id: '-lV2AC7z6GA',
+    title: 'Kinetic Art in Motion',
+    description: 'Another stunning example of handcrafted rolling ball artistry.',
+    isShort: true,
+  },
+  {
+    id: 'QXDErLLqp6U',
+    title: 'Marble Run Sculpture',
+    description: 'Experience the satisfying journey of marbles through intricate pathways.',
+    isShort: true,
+  },
+  {
+    id: 's76T57SmqoU',
+    title: 'Custom Rolling Ball Machine',
+    description: 'A closer look at the craftsmanship behind these unique kinetic sculptures.',
+    isShort: false,
+  },
+  {
+    id: 'fKghXGGNvYE',
+    title: 'Sculpture Workshop',
+    description: 'See the artistry and precision that goes into each creation.',
+    isShort: false,
+  },
+  {
+    id: 'wp9lKTqYlfA',
+    title: 'Rolling Ball Art',
+    description: 'The beauty of kinetic art - marbles dancing through handcrafted tracks.',
+    isShort: false,
+  },
 ]
 
 export function VideosContent() {
