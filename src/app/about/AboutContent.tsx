@@ -81,6 +81,30 @@ export function AboutContent() {
           </div>
         </div>
 
+        {/* Inspiration Section */}
+        <div className="glass rounded-3xl p-8 md:p-12 mb-24">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-white mb-6 text-center">
+              Inspired by the Masters of <span className="gradient-text">Kinetic Art</span>
+            </h2>
+            <p className="text-text-secondary leading-relaxed mb-6">
+              {siteContent.about.inspiration}
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-8">
+              {[
+                { term: 'Rolling Ball Sculpture', desc: 'Also known as marble machines, ball runs, or kugelbahn' },
+                { term: 'Kinetic Art', desc: 'Art that contains moving parts or depends on motion' },
+                { term: 'Audiokinetic', desc: 'Sculptures that create sound as balls strike bells and chimes' },
+              ].map((item, index) => (
+                <div key={index} className="text-center p-4 border border-white/10 rounded-xl">
+                  <h3 className="text-primary font-semibold mb-2">{item.term}</h3>
+                  <p className="text-text-muted text-sm">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
         {/* Quality Section */}
         <div className="glass rounded-3xl p-8 md:p-12 mb-24">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
