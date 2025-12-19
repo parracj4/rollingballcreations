@@ -79,6 +79,11 @@ export const metadata: Metadata = {
     'museum ball machine',
     'children hospital sculpture',
     'Creative Machines Tucson',
+    // Maintenance & repair
+    'rolling ball sculpture repair',
+    'marble machine maintenance',
+    'kinetic sculpture repair',
+    'ball machine restoration',
     // Location
     'rolling ball sculpture USA',
     'marble machine artist',

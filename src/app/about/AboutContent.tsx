@@ -8,7 +8,7 @@ const stats = [
   { value: '30+', label: 'Sculptures Created' },
   { value: '100%', label: 'Handcrafted' },
   { value: 'Global', label: 'Shipping' },
-  { value: 'Lifetime', label: 'Quality Guarantee' },
+  { value: 'Yes', label: 'Maintenance Services' },
 ]
 
 export function AboutContent() {
@@ -140,15 +140,18 @@ export function AboutContent() {
           </div>
         </div>
 
-        {/* Quality Section */}
+        {/* Quality & Maintenance Section */}
         <div className="glass rounded-3xl p-8 md:p-12 mb-24">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
               <h2 className="text-3xl font-bold text-white mb-4">
-                Quality That Lasts a Lifetime
+                Craftsmanship &amp; Care
               </h2>
-              <p className="text-text-secondary leading-relaxed">
+              <p className="text-text-secondary leading-relaxed mb-4">
                 {siteContent.about.quality}
+              </p>
+              <p className="text-text-secondary leading-relaxed">
+                As with any fine kinetic art, rolling ball sculptures benefit from periodic maintenance to keep them running smoothly. Jon offers maintenance and repair services for his own creations as well as other marble machines and rolling ball sculptures—whether you need a tune-up, track adjustment, or restoration work.
               </p>
             </div>
             <div className="grid grid-cols-2 gap-4">
@@ -156,7 +159,7 @@ export function AboutContent() {
                 { icon: '⚙️', title: 'Premium Metals', desc: 'Stainless steel & copper' },
                 { icon: '🔮', title: 'Quality Marbles', desc: 'Hand-selected glass' },
                 { icon: '⚡', title: 'Precision Motors', desc: 'Smooth operation' },
-                { icon: '🛡️', title: 'Built to Last', desc: 'Minimal maintenance' },
+                { icon: '🔧', title: 'Maintenance', desc: 'Repairs & tune-ups available' },
               ].map((item, index) => (
                 <div key={index} className="text-center p-4">
                   <div className="text-3xl mb-2">{item.icon}</div>
