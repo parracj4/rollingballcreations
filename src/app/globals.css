@@ -73,9 +73,9 @@
     background-size: 200% auto;
   }
 
-  /* Animated gradient background orbs - reduced blur on mobile */
+  /* Animated gradient background orbs - crisp circles like marbles */
   .gradient-orb {
-    @apply absolute rounded-full blur-2xl md:blur-3xl opacity-50;
+    @apply absolute rounded-full opacity-50;
     animation: float 6s ease-in-out infinite;
   }
 
