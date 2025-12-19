@@ -3,6 +3,7 @@ import {
   FeaturedSculptures,
   AboutPreview,
   ProcessPreview,
+  VideoPreview,
   CTASection,
 } from '@/components/sections'
 
@@ -12,6 +13,7 @@ export default function HomePage() {
       <Hero />
       <FeaturedSculptures />
       <AboutPreview />
+      <VideoPreview />
       <ProcessPreview />
       <CTASection />
     </>
