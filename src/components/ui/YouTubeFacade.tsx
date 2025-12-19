@@ -10,16 +10,24 @@ interface YouTubeFacadeProps {
   className?: string
 }
 
+// YouTube thumbnail quality fallback order
+const THUMBNAIL_QUALITIES = ['maxresdefault', 'sddefault', 'hqdefault', 'mqdefault', 'default']
+
 export function YouTubeFacade({ videoId, title, isShort = false, className = '' }: YouTubeFacadeProps) {
   const [isLoaded, setIsLoaded] = useState(false)
+  const [qualityIndex, setQualityIndex] = useState(0)
 
-  // Use maxresdefault for shorts, hqdefault for regular videos
-  const thumbnailUrl = isShort
-    ? `https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg`
-    : `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`
+  const thumbnailUrl = `https://i.ytimg.com/vi/${videoId}/${THUMBNAIL_QUALITIES[qualityIndex]}.jpg`
 
   const handleClick = () => {
     setIsLoaded(true)
+  }
+
+  const handleImageError = () => {
+    // Try next quality level if available
+    if (qualityIndex < THUMBNAIL_QUALITIES.length - 1) {
+      setQualityIndex(qualityIndex + 1)
+    }
   }
 
   if (isLoaded) {
@@ -48,6 +56,8 @@ export function YouTubeFacade({ videoId, title, isShort = false, className = '' 
         sizes={isShort ? "(max-width: 768px) 100vw, 400px" : "(max-width: 768px) 100vw, 800px"}
         className="object-cover"
         loading="lazy"
+        onError={handleImageError}
+        unoptimized
       />
 
       {/* Play button overlay */}
