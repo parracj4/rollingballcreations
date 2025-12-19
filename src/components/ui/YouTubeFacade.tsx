@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import Image from 'next/image'
 
 interface YouTubeFacadeProps {
   videoId: string
@@ -10,24 +9,28 @@ interface YouTubeFacadeProps {
   className?: string
 }
 
-// YouTube thumbnail quality fallback order
-const THUMBNAIL_QUALITIES = ['maxresdefault', 'sddefault', 'hqdefault', 'mqdefault', 'default']
-
 export function YouTubeFacade({ videoId, title, isShort = false, className = '' }: YouTubeFacadeProps) {
   const [isLoaded, setIsLoaded] = useState(false)
-  const [qualityIndex, setQualityIndex] = useState(0)
 
-  const thumbnailUrl = `https://i.ytimg.com/vi/${videoId}/${THUMBNAIL_QUALITIES[qualityIndex]}.jpg`
+  // For Shorts, we'll embed directly since thumbnails often don't work well
+  // For regular videos, use hqdefault which is most reliable
+  const thumbnailUrl = `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`
 
   const handleClick = () => {
     setIsLoaded(true)
   }
 
-  const handleImageError = () => {
-    // Try next quality level if available
-    if (qualityIndex < THUMBNAIL_QUALITIES.length - 1) {
-      setQualityIndex(qualityIndex + 1)
-    }
+  // For Shorts, just embed directly - thumbnails are unreliable
+  if (isShort) {
+    return (
+      <iframe
+        src={`https://www.youtube.com/embed/${videoId}`}
+        title={title}
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        className={`w-full h-full ${className}`}
+      />
+    )
   }
 
   if (isLoaded) {
@@ -48,16 +51,13 @@ export function YouTubeFacade({ videoId, title, isShort = false, className = '' 
       className={`relative w-full h-full bg-surface cursor-pointer group ${className}`}
       aria-label={`Play ${title}`}
     >
-      {/* Thumbnail */}
-      <Image
+      {/* Thumbnail - using native img for reliable loading */}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
         src={thumbnailUrl}
         alt={title}
-        fill
-        sizes={isShort ? "(max-width: 768px) 100vw, 400px" : "(max-width: 768px) 100vw, 800px"}
-        className="object-cover"
+        className="absolute inset-0 w-full h-full object-cover"
         loading="lazy"
-        onError={handleImageError}
-        unoptimized
       />
 
       {/* Play button overlay */}
