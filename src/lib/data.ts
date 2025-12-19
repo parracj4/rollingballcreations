@@ -26,6 +26,7 @@ export interface SiteContent {
     tagline: string
     slogan: string
     artist: string
+    phone: string
     address: {
       street: string
       city: string
@@ -234,6 +235,7 @@ export const siteContent = {
     tagline: 'Custom Rolling Ball Sculptures',
     slogan: 'One of a kind art for your home or business',
     artist: 'Jon Parrack',
+    phone: '304-593-6412',
     address: {
       street: '809 Viand St',
       city: 'Point Pleasant',

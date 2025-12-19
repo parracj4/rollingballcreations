@@ -72,6 +72,14 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <a
+                  href={`tel:${business.phone}`}
+                  className="text-text-muted hover:text-white transition-colors"
+                >
+                  {business.phone}
+                </a>
+              </li>
+              <li>
                 <span className="text-text-muted">
                   {business.address.street}
                 </span>
@@ -83,6 +91,22 @@ export function Footer() {
                 </span>
               </li>
             </ul>
+          </div>
+        </div>
+
+        {/* Google Maps */}
+        <div className="mt-12 pt-8 border-t border-white/10">
+          <div className="rounded-2xl overflow-hidden border border-white/10">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3114.8!2d-82.136957!3d38.847049!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8848e3d7a8c54f6d%3A0x0!2s809+Viand+St%2C+Point+Pleasant%2C+WV+25550!5e0!3m2!1sen!2sus!4v1"
+              width="100%"
+              height="250"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Jon's Creations Location"
+            />
           </div>
         </div>
 

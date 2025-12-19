@@ -111,22 +111,55 @@ export function AboutContent() {
           </div>
         </div>
 
-        {/* Location */}
-        <div className="text-center">
-          <GlassCard className="inline-block" hover={false}>
-            <div className="flex items-center gap-4">
-              <div className="text-4xl">📍</div>
-              <div className="text-left">
-                <p className="text-white font-semibold">
-                  {siteContent.business.address.city},{' '}
-                  {siteContent.business.address.state}
-                </p>
-                <p className="text-text-muted text-sm">
-                  Shipping {siteContent.business.shipping.toLowerCase()}
-                </p>
+        {/* Location & Contact */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+          <div className="space-y-4">
+            <GlassCard hover={false}>
+              <div className="flex items-center gap-4">
+                <div className="text-4xl">📍</div>
+                <div className="text-left">
+                  <p className="text-white font-semibold">
+                    {siteContent.business.address.street}
+                  </p>
+                  <p className="text-text-muted">
+                    {siteContent.business.address.city},{' '}
+                    {siteContent.business.address.state}{' '}
+                    {siteContent.business.address.zip}
+                  </p>
+                  <p className="text-primary text-sm mt-1">
+                    Shipping {siteContent.business.shipping.toLowerCase()}
+                  </p>
+                </div>
               </div>
-            </div>
-          </GlassCard>
+            </GlassCard>
+            <GlassCard hover={false}>
+              <div className="flex items-center gap-4">
+                <div className="text-4xl">📞</div>
+                <div className="text-left">
+                  <p className="text-white font-semibold">Call Jon</p>
+                  <a
+                    href={`tel:${siteContent.business.phone}`}
+                    className="text-text-secondary hover:text-primary transition-colors"
+                  >
+                    {siteContent.business.phone}
+                  </a>
+                </div>
+              </div>
+            </GlassCard>
+          </div>
+          <div className="rounded-2xl overflow-hidden border border-white/10">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3114.8!2d-82.136957!3d38.847049!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8848e3d7a8c54f6d%3A0x0!2s809+Viand+St%2C+Point+Pleasant%2C+WV+25550!5e0!3m2!1sen!2sus!4v1"
+              width="100%"
+              height="250"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Jon's Creations Location"
+              className="w-full"
+            />
+          </div>
         </div>
       </section>
 
