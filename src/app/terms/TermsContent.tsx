@@ -4,6 +4,16 @@ import { GlassCard, GlassButton, AnimatedGradient } from '@/components/ui'
 
 const termsData = [
   {
+    title: 'Acceptance of Terms',
+    content:
+      'By accessing and using this website, you accept and agree to be bound by these Terms & Conditions. If you do not agree to these terms, please do not use this website. Your continued use of this site constitutes your acceptance of any unmet accessibility standards, design choices, and all other terms herein.',
+  },
+  {
+    title: 'Website Accessibility',
+    content:
+      'This website is designed with aesthetics and user experience in mind. While we have made efforts to improve accessibility, some elements may not meet all accessibility standards. By using this website, you acknowledge and accept any accessibility limitations. If you have difficulty accessing any content, please contact us directly and we will do our best to assist you.',
+  },
+  {
     title: 'Information Use',
     content:
       'The information you provide (name, email, message) will be used solely to respond to your inquiry and communicate about potential commissions or purchases. We will not sell, share, or distribute your personal information to third parties.',
@@ -24,9 +34,14 @@ const termsData = [
       'By providing your email address, you consent to receiving email communications related to your inquiry. You may opt out of future communications at any time.',
   },
   {
-    title: 'Accessibility & Communication',
+    title: 'Limitation of Liability',
     content:
-      'We strive to communicate across language and disability barriers to the best of our ability. However, we make no warranty or promise regarding our communication capabilities or the availability of translation, interpretation, or accessibility accommodations.',
+      'This website and its content are provided "as is" without warranties of any kind. We shall not be liable for any damages arising from your use of this website, including but not limited to direct, indirect, incidental, or consequential damages.',
+  },
+  {
+    title: 'Intellectual Property',
+    content:
+      'All content on this website, including images, text, designs, and artwork, is the property of Jon\'s Creations and is protected by copyright law. You may not reproduce, distribute, or use any content without prior written permission.',
   },
   {
     title: 'Accuracy of Information',
@@ -37,6 +52,11 @@ const termsData = [
     title: 'Age Requirement',
     content:
       'You must be at least 18 years old to submit a commission inquiry or make a purchase.',
+  },
+  {
+    title: 'Changes to Terms',
+    content:
+      'We reserve the right to modify these terms at any time without prior notice. Your continued use of the website following any changes constitutes acceptance of the new terms.',
   },
 ]
 
