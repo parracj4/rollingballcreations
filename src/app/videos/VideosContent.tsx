@@ -9,7 +9,12 @@ const videos = [
     description: "Jon's biggest creation to date - a massive motorized rolling ball sculpture with multiple track paths.",
     isShort: true,
   },
-  // Add more videos here as Jon creates them
+  {
+    id: 'aqPEs9TWomQ',
+    title: 'Rolling Ball Sculpture',
+    description: 'Watch the mesmerizing flow of marbles through this handcrafted kinetic sculpture.',
+    isShort: true,
+  },
 ]
 
 export function VideosContent() {
@@ -54,7 +59,7 @@ export function VideosContent() {
           ))}
         </div>
 
-        {videos.length === 1 && (
+        {videos.length <= 3 && (
           <div className="text-center mt-16">
             <GlassCard hover={false} className="inline-block max-w-lg">
               <p className="text-text-secondary mb-4">
