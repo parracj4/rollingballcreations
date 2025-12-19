@@ -28,10 +28,10 @@ const config: Config = {
           dark: '#b08c3e',
         },
 
-        // Text colors
+        // Text colors - optimized for WCAG AA contrast (4.5:1 min)
         'text-primary': '#ffffff',
-        'text-secondary': '#a0a0b0',
-        'text-muted': '#6b6b7b',
+        'text-secondary': '#b8b8c8',
+        'text-muted': '#9090a0',
 
         // Status
         success: '#35a670',

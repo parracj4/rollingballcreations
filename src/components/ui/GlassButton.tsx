@@ -36,8 +36,8 @@ export function GlassButton({
       'hover:bg-white/10 hover:border-white/20',
     ],
     variant === 'primary' && [
-      'bg-primary/90 border-primary/50 text-white',
-      'hover:bg-primary hover:shadow-glow',
+      'bg-primary border-primary text-white',
+      'hover:bg-primary-light hover:shadow-glow',
     ],
     variant === 'outline' && [
       'bg-transparent border-white/20 text-white',
