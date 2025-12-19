@@ -1,7 +1,56 @@
 'use client'
 
+import { useState, useEffect, useRef } from 'react'
 import { GlassCard, GlassButton, AnimatedGradient } from '@/components/ui'
 import { siteContent } from '@/lib/data'
+
+function LazyZohoForm() {
+  const [isVisible, setIsVisible] = useState(false)
+  const containerRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+          observer.disconnect()
+        }
+      },
+      { rootMargin: '100px' }
+    )
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current)
+    }
+
+    return () => observer.disconnect()
+  }, [])
+
+  return (
+    <div ref={containerRef} className="rounded-2xl overflow-hidden border border-white/10">
+      {isVisible ? (
+        <iframe
+          aria-label="Send us a message"
+          frameBorder="0"
+          style={{ minHeight: '950px', width: '100%', border: 'none' }}
+          src="https://forms.piawv.com/parrackinsurance/form/SendusamessageRollingBallCreations/formperma/SR6dX1qry_r32wXv5XTHHJRJscgbefokqtfER2RWs7I"
+          title="Contact Form"
+          loading="lazy"
+        />
+      ) : (
+        <div
+          className="flex items-center justify-center bg-surface"
+          style={{ minHeight: '950px' }}
+        >
+          <div className="text-center">
+            <div className="w-8 h-8 border-2 border-primary border-t-transparent rounded-full animate-spin mx-auto mb-4" />
+            <p className="text-text-secondary">Loading contact form...</p>
+          </div>
+        </div>
+      )}
+    </div>
+  )
+}
 
 export function ContactContent() {
   return (
@@ -25,15 +74,7 @@ export function ContactContent() {
       <div className="container-custom">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
-            <div className="rounded-2xl overflow-hidden border border-white/10">
-              <iframe
-                aria-label="Send us a message"
-                frameBorder="0"
-                style={{ minHeight: '855px', width: '100%', border: 'none' }}
-                src="https://forms.piawv.com/parrackinsurance/form/SendusamessageRollingBallCreations/formperma/SR6dX1qry_r32wXv5XTHHJRJscgbefokqtfER2RWs7I"
-                title="Contact Form"
-              />
-            </div>
+            <LazyZohoForm />
           </div>
 
           <div className="space-y-6">
