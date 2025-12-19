@@ -45,12 +45,12 @@ export function Navigation() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-6 xl:gap-8">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-text-secondary hover:text-white transition-colors relative group"
+                className="text-text-secondary hover:text-white transition-colors relative group text-sm xl:text-base"
               >
                 {link.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300" />
@@ -59,7 +59,7 @@ export function Navigation() {
           </div>
 
           {/* CTA Button */}
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <GlassButton href="/contact" variant="primary" size="sm">
               Get in Touch
             </GlassButton>
@@ -67,7 +67,7 @@ export function Navigation() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden relative w-10 h-10 flex items-center justify-center"
+            className="lg:hidden relative w-10 h-10 flex items-center justify-center"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -94,7 +94,7 @@ export function Navigation() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 z-40 md:hidden">
+        <div className="fixed inset-0 z-40 lg:hidden">
           {/* Backdrop */}
           <div
             className="absolute inset-0 bg-background/80 backdrop-blur-md"
