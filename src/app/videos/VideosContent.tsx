@@ -45,6 +45,12 @@ const videos = [
     description: 'The beauty of kinetic art - marbles dancing through handcrafted tracks.',
     isShort: false,
   },
+  {
+    id: 'mSGgK7cwA0E',
+    title: 'Sculpture Close-Up',
+    description: 'Get up close with the intricate details of a rolling ball sculpture.',
+    isShort: true,
+  },
 ]
 
 export function VideosContent() {
