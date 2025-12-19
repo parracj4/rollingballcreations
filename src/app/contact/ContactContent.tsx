@@ -29,7 +29,7 @@ export function ContactContent() {
               <iframe
                 aria-label="Send us a message"
                 frameBorder="0"
-                style={{ minHeight: '1200px', width: '100%', border: 'none' }}
+                style={{ minHeight: '800px', width: '100%', border: 'none' }}
                 src="https://forms.piawv.com/parrackinsurance/form/SendusamessageRollingBallCreations/formperma/SR6dX1qry_r32wXv5XTHHJRJscgbefokqtfER2RWs7I"
                 title="Contact Form"
               />
