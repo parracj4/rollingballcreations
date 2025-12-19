@@ -46,7 +46,7 @@ export function Hero() {
           </div>
 
           {/* Stats */}
-          <div className="flex justify-center gap-8 sm:gap-16 mt-16">
+          <div className="flex justify-center gap-6 sm:gap-16 mt-12 sm:mt-16 mb-20 sm:mb-0">
             {[
               { value: '30+', label: 'Sculptures Sold' },
               { value: '100%', label: 'Handcrafted' },
