@@ -191,8 +191,13 @@ export function SculptureDetail({ sculpture, related }: SculptureDetailProps) {
             <div className="flex flex-col sm:flex-row gap-4">
               {isAvailable ? (
                 <>
-                  <GlassButton variant="primary" size="lg" className="flex-1">
-                    Add to Cart - {formatPrice(sculpture.price)}
+                  <GlassButton
+                    href="/contact"
+                    variant="primary"
+                    size="lg"
+                    className="flex-1"
+                  >
+                    Inquire About This Piece
                   </GlassButton>
                   <GlassButton
                     href="/contact"
@@ -224,11 +229,11 @@ export function SculptureDetail({ sculpture, related }: SculptureDetailProps) {
                 </span>
                 <span className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-success" />
-                  Secure Checkout
+                  Handcrafted Quality
                 </span>
                 <span className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-success" />
-                  Lifetime Quality
+                  Direct from Artist
                 </span>
               </div>
             </div>

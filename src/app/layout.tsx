@@ -1,8 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter, Playfair_Display } from 'next/font/google'
 import { Navigation, Footer } from '@/components/layout'
-import { CartDrawer } from '@/components/cart'
-import { CartProvider } from '@/lib/cart-context'
 import './globals.css'
 
 const inter = Inter({
@@ -84,12 +82,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
       <body className="font-sans">
-        <CartProvider>
-          <Navigation />
-          <main>{children}</main>
-          <Footer />
-          <CartDrawer />
-        </CartProvider>
+        <Navigation />
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   )

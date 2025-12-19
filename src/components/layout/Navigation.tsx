@@ -60,8 +60,8 @@ export function Navigation() {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <GlassButton href="/gallery" variant="primary" size="sm">
-              Shop Now
+            <GlassButton href="/contact" variant="primary" size="sm">
+              Get in Touch
             </GlassButton>
           </div>
 
@@ -117,11 +117,11 @@ export function Navigation() {
               ))}
               <div className="pt-4 border-t border-white/10">
                 <GlassButton
-                  href="/gallery"
+                  href="/contact"
                   variant="primary"
                   className="w-full"
                 >
-                  Shop Now
+                  Get in Touch
                 </GlassButton>
               </div>
             </div>
