@@ -25,15 +25,15 @@ export function ContactContent() {
       <div className="container-custom">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
-            <GlassCard className="p-0 overflow-hidden" hover={false}>
+            <div className="rounded-2xl overflow-hidden border border-white/10">
               <iframe
                 aria-label="Send us a message"
                 frameBorder="0"
-                style={{ height: '500px', width: '100%', border: 'none' }}
+                style={{ minHeight: '1200px', width: '100%', border: 'none' }}
                 src="https://forms.piawv.com/parrackinsurance/form/SendusamessageRollingBallCreations/formperma/SR6dX1qry_r32wXv5XTHHJRJscgbefokqtfER2RWs7I"
                 title="Contact Form"
               />
-            </GlassCard>
+            </div>
           </div>
 
           <div className="space-y-6">
