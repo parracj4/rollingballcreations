@@ -14,11 +14,11 @@ const config: Config = {
         surface: '#12121a',
         'surface-light': '#1a1a24',
 
-        // Primary - warm copper/orange (darkened for WCAG AA contrast with white text)
+        // Primary - warm copper/orange (darkened for WCAG AA 4.5:1 contrast with white)
         primary: {
-          DEFAULT: '#d95a25',
-          light: '#ff6b35',
-          dark: '#b84a1a',
+          DEFAULT: '#c44d1c',
+          light: '#e05a25',
+          dark: '#a33d12',
         },
 
         // Accent - metallic gold
@@ -99,8 +99,8 @@ const config: Config = {
       boxShadow: {
         'glass': '0 8px 32px 0 rgba(0, 0, 0, 0.37)',
         'glass-lg': '0 25px 50px -12px rgba(0, 0, 0, 0.5)',
-        'glow': '0 0 20px rgba(217, 90, 37, 0.4)',
-        'glow-lg': '0 0 40px rgba(217, 90, 37, 0.5)',
+        'glow': '0 0 20px rgba(196, 77, 28, 0.5)',
+        'glow-lg': '0 0 40px rgba(196, 77, 28, 0.6)',
         'inner-glow': 'inset 0 1px 1px rgba(255, 255, 255, 0.1)',
       },
 
