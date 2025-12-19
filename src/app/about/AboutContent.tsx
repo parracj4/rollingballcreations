@@ -51,9 +51,9 @@ export function AboutContent() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
           {/* Image */}
           <div>
-            <div className="relative aspect-[4/3] rounded-3xl overflow-hidden">
+            <div className="relative aspect-square max-w-md mx-auto rounded-3xl overflow-hidden">
               <Image
-                src="/images/hero/DSC00397-hero.jpg"
+                src="/images/jon-parrack.webp"
                 alt="Jon Parrack - Rolling Ball Sculpture Artist"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
