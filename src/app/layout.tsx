@@ -67,6 +67,11 @@ export const metadata: Metadata = {
     'custom kinetic art',
     'handcrafted kinetic sculpture',
     'one of a kind sculpture',
+    // Movie/pop culture references
+    'Fracture movie sculpture',
+    'Fracture 2007 marble machine',
+    'Anthony Hopkins marble sculpture',
+    'rolling ball sculpture from Fracture',
     // Location
     'rolling ball sculpture USA',
     'marble machine artist',
