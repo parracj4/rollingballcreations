@@ -1,6 +1,6 @@
 'use client'
 
-import { GlassCard, GlassButton, AnimatedGradient } from '@/components/ui'
+import { GlassCard, GlassButton, AnimatedGradient, YouTubeFacade } from '@/components/ui'
 
 const videos = [
   {
@@ -79,12 +79,10 @@ export function VideosContent() {
           {videos.map((video) => (
             <GlassCard key={video.id} hover={false} className="overflow-hidden">
               <div className={video.isShort ? 'aspect-[9/16]' : 'aspect-video'}>
-                <iframe
-                  src={`https://www.youtube.com/embed/${video.id}`}
+                <YouTubeFacade
+                  videoId={video.id}
                   title={video.title}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full h-full"
+                  isShort={video.isShort}
                 />
               </div>
               <div className="p-4">

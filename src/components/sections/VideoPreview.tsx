@@ -1,6 +1,4 @@
-'use client'
-
-import { GlassButton } from '@/components/ui'
+import { GlassButton, YouTubeFacade } from '@/components/ui'
 
 export function VideoPreview() {
   return (
@@ -20,12 +18,10 @@ export function VideoPreview() {
         <div className="max-w-md mx-auto">
           <div className="rounded-2xl overflow-hidden border border-white/10 bg-surface/50">
             <div className="aspect-[9/16]">
-              <iframe
-                src="https://www.youtube.com/embed/zPCd1yVWd6I"
+              <YouTubeFacade
+                videoId="zPCd1yVWd6I"
                 title="Large Motorized Rolling Ball Sculpture"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="w-full h-full"
+                isShort
               />
             </div>
             <div className="p-4">

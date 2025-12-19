@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import { GlassCard, GlassButton, AnimatedGradient } from '@/components/ui'
+import { GlassCard, GlassButton, AnimatedGradient, YouTubeFacade } from '@/components/ui'
 
 const capabilities = [
   {
@@ -68,12 +68,10 @@ export function InstallationsContent() {
           <div className="max-w-4xl mx-auto">
             <div className="rounded-3xl overflow-hidden border border-white/10 bg-surface/50">
               <div className="aspect-[9/16] md:aspect-video max-h-[600px] mx-auto">
-                <iframe
-                  src="https://www.youtube.com/embed/zPCd1yVWd6I"
+                <YouTubeFacade
+                  videoId="zPCd1yVWd6I"
                   title="Large Motorized Rolling Ball Sculpture"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full h-full"
+                  isShort
                 />
               </div>
             </div>
