@@ -67,7 +67,7 @@ const faqs: FAQItem[] = [
     category: 'Shipping & Installation',
     question: 'How are sculptures packaged for shipping?',
     answer:
-      'Each sculpture is secured with custom padding and packed in sturdy crating appropriate for its size. Fragile components are protected individually. Jon has shipped hundreds of pieces without incident.',
+      'Each sculpture is secured with custom padding and packed in sturdy crating appropriate for its size. Fragile components are protected individually to ensure safe arrival.',
   },
   {
     category: 'Shipping & Installation',
