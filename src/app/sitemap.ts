@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next'
-import products from '@/../content/products.json'
+import { sculptures } from '@/lib/data'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://rollingballcreations.com'
@@ -86,14 +86,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ]
 
-  // Dynamic gallery pages from products
-  const allProducts = [
-    ...products.products.for_sale,
-    ...products.products.sold,
-  ]
-
-  const galleryPages: MetadataRoute.Sitemap = allProducts.map((product) => ({
-    url: `${baseUrl}/gallery/${product.slug}`,
+  // Dynamic gallery pages from sculptures data
+  const galleryPages: MetadataRoute.Sitemap = sculptures.map((sculpture) => ({
+    url: `${baseUrl}/gallery/${sculpture.slug}`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.8,
