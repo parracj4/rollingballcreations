@@ -1,38 +1,56 @@
 'use client'
 
 import Image from 'next/image'
+import Link from 'next/link'
 import { GlassCard, GlassButton, AnimatedGradient, YouTubeFacade } from '@/components/ui'
+
+const installationTypes = [
+  {
+    title: 'Healthcare & Hospitals',
+    description:
+      'Calm anxious patients and create welcoming environments in lobbies, waiting rooms, and pediatric areas. Built for 24/7 operation with easy-to-clean surfaces.',
+    href: '/healthcare',
+    image: '/images/products/DSC00389-large-motorized.webp',
+    features: ['Reduces patient anxiety', 'Engages all ages', 'Low maintenance'],
+  },
+  {
+    title: 'Corporate & Commercial',
+    description:
+      'Make a lasting impression on clients and visitors. Custom sculptures for office lobbies, headquarters, hotels, and retail spaces that reflect your brand.',
+    href: '/corporate',
+    image: '/images/products/AB-Machine-polished-stainless.webp',
+    features: ['Brand integration', 'Conversation starter', 'Premium materials'],
+  },
+  {
+    title: 'Museums & Science Centers',
+    description:
+      'Interactive exhibits that teach physics through wonder. Durable construction for public spaces with high visitor traffic and educational programming.',
+    href: '/museums',
+    image: '/images/products/DSC00403-wall-mount-round.webp',
+    features: ['Educational value', 'Built for public use', 'Custom sizing'],
+  },
+]
 
 const capabilities = [
   {
-    title: 'Monumental Scale',
-    description: 'Sculptures from 6 feet to 20+ feet tall, engineered for visual impact in large spaces.',
-    icon: '🏛️',
-  },
-  {
-    title: 'Indoor & Outdoor',
-    description: 'Weather-resistant options for outdoor installations with durable, corrosion-resistant materials.',
-    icon: '🌤️',
+    title: 'Any Scale',
+    description: 'From tabletop pieces to multi-story installations.',
+    icon: '📐',
   },
   {
     title: 'Continuous Operation',
-    description: 'Engineered for 24/7 operation with minimal maintenance and quiet, reliable motor systems.',
+    description: 'Engineered for reliable 24/7 performance.',
     icon: '⚡',
   },
   {
-    title: 'Custom Theming',
-    description: 'Incorporate logos, brand colors, or thematic elements into the sculpture design.',
+    title: 'Custom Design',
+    description: 'Every piece built to your specifications.',
     icon: '🎨',
   },
   {
-    title: 'Full Installation',
-    description: 'Complete project management from design through installation and commissioning.',
+    title: 'Full Support',
+    description: 'Installation, training, and ongoing maintenance.',
     icon: '🔧',
-  },
-  {
-    title: 'Architectural Integration',
-    description: 'Designed to complement and enhance your space, working with architects and designers.',
-    icon: '📐',
   },
 ]
 
@@ -40,7 +58,7 @@ export function InstallationsContent() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 opacity-40">
           <AnimatedGradient />
         </div>
@@ -48,26 +66,98 @@ export function InstallationsContent() {
         <div className="container-custom relative z-10 py-32">
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-primary font-medium mb-6 tracking-wide uppercase">
-              Large Scale Commissions
+              Commercial & Institutional
             </p>
-            <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">
-              Monumental<br />
-              <span className="gradient-text">Kinetic Sculpture</span>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-8 leading-tight">
+              Sculptures for
+              <br />
+              <span className="gradient-text">Every Space</span>
             </h1>
-            <p className="text-text-secondary text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed">
-              Custom rolling ball sculptures at any scale — from intimate tabletop pieces
-              to multi-story installations engineered for continuous operation.
+            <p className="text-text-secondary text-xl max-w-3xl mx-auto leading-relaxed">
+              Custom rolling ball sculptures designed for the unique demands of
+              public spaces, commercial environments, and institutional settings.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Featured Video */}
+      {/* Installation Types - Main Cards */}
+      <section className="py-24">
+        <div className="container-custom">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              Find Your Fit
+            </h2>
+            <p className="text-text-secondary max-w-2xl mx-auto">
+              Different environments have different needs. Explore the option
+              that matches your space.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {installationTypes.map((type, index) => (
+              <Link key={index} href={type.href} className="group">
+                <div className="glass rounded-3xl overflow-hidden h-full flex flex-col transition-all duration-300 group-hover:border-primary/50">
+                  {/* Image */}
+                  <div className="relative aspect-[4/3] overflow-hidden">
+                    <Image
+                      src={type.image}
+                      alt={type.title}
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 33vw"
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
+                  </div>
+
+                  {/* Content */}
+                  <div className="p-6 flex-1 flex flex-col">
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-primary transition-colors">
+                      {type.title}
+                    </h3>
+                    <p className="text-text-muted text-sm leading-relaxed mb-4 flex-1">
+                      {type.description}
+                    </p>
+
+                    {/* Features */}
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {type.features.map((feature, i) => (
+                        <span
+                          key={i}
+                          className="text-xs px-3 py-1 rounded-full bg-white/5 text-text-secondary"
+                        >
+                          {feature}
+                        </span>
+                      ))}
+                    </div>
+
+                    {/* CTA */}
+                    <div className="flex items-center text-primary font-medium text-sm group-hover:gap-3 gap-2 transition-all">
+                      Learn More
+                      <span className="transition-transform group-hover:translate-x-1">→</span>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Video Section */}
       <section className="py-24 bg-surface/30">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-white mb-4">
+                See It in Action
+              </h2>
+              <p className="text-text-secondary">
+                Watch one of Jon&apos;s larger motorized sculptures in motion.
+              </p>
+            </div>
             <div className="rounded-3xl overflow-hidden border border-white/10 bg-surface/50">
-              <div className="aspect-[9/16] md:aspect-video max-h-[600px] mx-auto">
+              <div className="aspect-[9/16] md:aspect-video max-h-[500px] mx-auto">
                 <YouTubeFacade
                   videoId="zPCd1yVWd6I"
                   title="Large Motorized Rolling Ball Sculpture"
@@ -75,140 +165,56 @@ export function InstallationsContent() {
                 />
               </div>
             </div>
-            <p className="text-center text-text-muted mt-6">
-              Jon&apos;s largest motorized sculpture to date — a testament to what&apos;s possible at scale.
-            </p>
           </div>
         </div>
       </section>
 
-      {/* Intro Section */}
+      {/* Capabilities */}
       <section className="py-24">
         <div className="container-custom">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
-              Collaborative Artistry for<br />Exceptional Spaces
-            </h2>
-            <p className="text-text-secondary text-lg leading-relaxed mb-6">
-              Jon works directly with architects, curators, interior designers, and facilities
-              teams to create kinetic sculptures that become defining features of their environments.
-              Each installation is custom designed and built to integrate seamlessly with your
-              specific space — whether that&apos;s a museum lobby, corporate headquarters, hospital
-              atrium, or public plaza.
-            </p>
-            <p className="text-text-secondary text-lg leading-relaxed">
-              From initial concept through final installation, Jon provides hands-on collaboration
-              to ensure every detail aligns with your vision and technical requirements.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Image */}
-      <section className="py-12">
-        <div className="container-custom">
-          <div className="max-w-5xl mx-auto">
-            <div className="relative aspect-[16/9] rounded-3xl overflow-hidden border border-white/10">
-              <Image
-                src="/images/products/DSC00389-large-motorized.webp"
-                alt="Large motorized rolling ball sculpture"
-                fill
-                sizes="(max-width: 1280px) 100vw, 1280px"
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
-              <div className="absolute bottom-8 left-8 right-8">
-                <p className="text-white text-lg font-medium">40&quot; × 37&quot; × 13&quot; — Polished Stainless Steel</p>
-                <p className="text-text-secondary">Motorized with multiple track paths and helical lift system</p>
-              </div>
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-white mb-4">
+                What Sets Jon Apart
+              </h2>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {capabilities.map((cap, index) => (
+                <GlassCard key={index} hover={false} className="text-center p-6">
+                  <div className="text-3xl mb-3">{cap.icon}</div>
+                  <h3 className="text-white font-semibold text-sm mb-2">
+                    {cap.title}
+                  </h3>
+                  <p className="text-text-muted text-xs">
+                    {cap.description}
+                  </p>
+                </GlassCard>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Capabilities Grid */}
-      <section className="py-24 bg-surface/30">
+      {/* Private Collectors Note */}
+      <section className="py-16">
         <div className="container-custom">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Engineering Excellence
-            </h2>
-            <p className="text-text-secondary max-w-2xl mx-auto">
-              Purpose-built for institutional and commercial environments with demanding requirements.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {capabilities.map((capability, index) => (
-              <GlassCard key={index} hover={false} className="text-center">
-                <div className="text-4xl mb-4">{capability.icon}</div>
-                <h3 className="text-white font-semibold text-lg mb-3">
-                  {capability.title}
-                </h3>
-                <p className="text-text-muted text-sm leading-relaxed">
-                  {capability.description}
-                </p>
-              </GlassCard>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Process Overview */}
-      <section className="py-24">
-        <div className="container-custom">
-          <div className="max-w-4xl mx-auto">
-            <div className="glass rounded-3xl p-8 md:p-12">
-              <h2 className="text-3xl font-bold text-white mb-8 text-center">
-                The Commissioning Process
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                  <div className="flex items-start gap-4 mb-6">
-                    <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white font-bold text-sm flex-shrink-0">1</div>
-                    <div>
-                      <h3 className="text-white font-semibold mb-1">Discovery</h3>
-                      <p className="text-text-muted text-sm">Discuss your vision, space constraints, and technical requirements.</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-4 mb-6">
-                    <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white font-bold text-sm flex-shrink-0">2</div>
-                    <div>
-                      <h3 className="text-white font-semibold mb-1">Design</h3>
-                      <p className="text-text-muted text-sm">Collaborative design development with renderings and specifications.</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white font-bold text-sm flex-shrink-0">3</div>
-                    <div>
-                      <h3 className="text-white font-semibold mb-1">Fabrication</h3>
-                      <p className="text-text-muted text-sm">Precision handcrafting with regular progress updates and photos.</p>
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <div className="flex items-start gap-4 mb-6">
-                    <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white font-bold text-sm flex-shrink-0">4</div>
-                    <div>
-                      <h3 className="text-white font-semibold mb-1">Testing</h3>
-                      <p className="text-text-muted text-sm">Thorough testing and refinement before delivery.</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-4 mb-6">
-                    <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white font-bold text-sm flex-shrink-0">5</div>
-                    <div>
-                      <h3 className="text-white font-semibold mb-1">Installation</h3>
-                      <p className="text-text-muted text-sm">On-site installation, calibration, and staff training.</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white font-bold text-sm flex-shrink-0">6</div>
-                    <div>
-                      <h3 className="text-white font-semibold mb-1">Support</h3>
-                      <p className="text-text-muted text-sm">Ongoing support and maintenance guidance.</p>
-                    </div>
-                  </div>
-                </div>
+          <div className="max-w-3xl mx-auto">
+            <div className="glass rounded-3xl p-8 md:p-10 text-center">
+              <h3 className="text-xl font-bold text-white mb-4">
+                Looking for Something for Your Home?
+              </h3>
+              <p className="text-text-secondary mb-6">
+                Jon also creates sculptures for private collectors and residential
+                spaces. Browse the gallery to see available pieces or get in touch
+                to discuss a custom commission.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <GlassButton href="/gallery" variant="primary">
+                  Browse Gallery
+                </GlassButton>
+                <GlassButton href="/contact" variant="outline">
+                  Custom Commission
+                </GlassButton>
               </div>
             </div>
           </div>
@@ -220,21 +226,16 @@ export function InstallationsContent() {
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-              Let&apos;s Create Something Extraordinary
+              Not Sure Where to Start?
             </h2>
             <p className="text-text-secondary text-lg mb-10 max-w-2xl mx-auto">
-              Whether you&apos;re planning a new building, renovating a space, or seeking
-              a signature art piece, Jon is ready to discuss how a custom kinetic
-              sculpture can transform your environment.
+              Every project is different. Reach out to discuss your space, your
+              vision, and what might be possible. No obligation—just a
+              conversation about kinetic art.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <GlassButton href="/contact" variant="primary" size="lg">
-                Discuss Your Project
-              </GlassButton>
-              <GlassButton href="/videos" variant="outline" size="lg">
-                Watch More Videos
-              </GlassButton>
-            </div>
+            <GlassButton href="/contact" variant="primary" size="lg">
+              Start a Conversation
+            </GlassButton>
           </div>
         </div>
       </section>
