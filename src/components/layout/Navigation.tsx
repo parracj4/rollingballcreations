@@ -40,7 +40,7 @@ export function Navigation() {
               <span className="text-white font-bold text-lg">J</span>
             </div>
             <span className="text-xl font-semibold text-white group-hover:text-primary transition-colors">
-              Jon&apos;s Creations
+              Jon&apos;s Creations, LLC
             </span>
           </Link>
 
