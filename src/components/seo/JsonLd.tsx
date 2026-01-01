@@ -45,7 +45,7 @@ export function LocalBusinessJsonLd() {
       'Marble Machine',
       'Custom Metal Sculpture',
     ],
-    sameAs: [],
+    sameAs: [business.social.youtube, business.social.instagram],
   }
 
   return (

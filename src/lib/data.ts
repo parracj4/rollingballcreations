@@ -248,6 +248,10 @@ export const siteContent = {
       lng: -82.0847,
     },
     shipping: 'Worldwide',
+    social: {
+      youtube: 'https://www.youtube.com/@jonscreations9168',
+      instagram: 'https://www.instagram.com/parrackjon',
+    },
     stats: {
       sculpturesSold: '30+',
     },
