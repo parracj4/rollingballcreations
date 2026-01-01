@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${sculpture.material} Rolling Ball Sculpture`,
     description: sculpture.description,
     openGraph: {
-      title: `${sculpture.material} Rolling Ball Sculpture | Jon's Creations`,
+      title: `${sculpture.material} Rolling Ball Sculpture | Jon's Creations, LLC`,
       description: sculpture.description,
       images: sculpture.images[0]
         ? [

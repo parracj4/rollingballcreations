@@ -68,7 +68,7 @@ export function PersonJsonLd() {
     image: 'https://rollingballcreations.com/images/jon-parrack.webp',
     worksFor: {
       '@type': 'Organization',
-      name: "Jon's Creations",
+      name: "Jon's Creations, LLC",
     },
     knowsAbout: [
       'Rolling Ball Sculpture',
@@ -97,7 +97,7 @@ export function ArtGalleryJsonLd() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'ArtGallery',
-    name: "Jon's Creations",
+    name: "Jon's Creations, LLC",
     description:
       'Handcrafted rolling ball sculptures and kinetic art gallery featuring custom marble machines, ball runs, and audiokinetic sculptures for sale.',
     url: 'https://rollingballcreations.com/gallery',
@@ -123,11 +123,11 @@ export function ProductJsonLd({ sculpture }: { sculpture: Sculpture }) {
       : undefined,
     brand: {
       '@type': 'Brand',
-      name: "Jon's Creations",
+      name: "Jon's Creations, LLC",
     },
     manufacturer: {
       '@type': 'Organization',
-      name: "Jon's Creations",
+      name: "Jon's Creations, LLC",
     },
     offers:
       sculpture.status === 'available' && sculpture.price
@@ -139,7 +139,7 @@ export function ProductJsonLd({ sculpture }: { sculpture: Sculpture }) {
             url: `https://rollingballcreations.com/gallery/${sculpture.slug}`,
             seller: {
               '@type': 'Organization',
-              name: "Jon's Creations",
+              name: "Jon's Creations, LLC",
             },
           }
         : {
@@ -162,7 +162,7 @@ export function WebsiteJsonLd() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: "Jon's Creations",
+    name: "Jon's Creations, LLC",
     alternateName: 'Rolling Ball Creations',
     url: 'https://rollingballcreations.com',
     description:
@@ -280,7 +280,7 @@ export function ServiceJsonLd() {
     name: 'Custom Rolling Ball Sculpture Commission',
     provider: {
       '@type': 'LocalBusiness',
-      name: "Jon's Creations",
+      name: "Jon's Creations, LLC",
     },
     description:
       'Commission a custom rolling ball sculpture designed and handcrafted specifically for your space. Available for homes, offices, hospitals, museums, and commercial installations.',

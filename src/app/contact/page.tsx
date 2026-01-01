@@ -4,7 +4,7 @@ import { ContactContent } from './ContactContent'
 export const metadata: Metadata = {
   title: 'Contact',
   description:
-    "Get in touch with Jon's Creations. Commission a custom rolling ball sculpture or ask questions about our kinetic art pieces.",
+    "Get in touch with Jon's Creations, LLC. Commission a custom rolling ball sculpture or ask questions about our kinetic art pieces.",
 }
 
 export default function ContactPage() {

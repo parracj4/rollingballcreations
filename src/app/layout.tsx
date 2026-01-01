@@ -18,8 +18,8 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   metadataBase: new URL('https://rollingballcreations.com'),
   title: {
-    default: "Jon's Creations | Custom Rolling Ball Sculptures",
-    template: "%s | Jon's Creations",
+    default: "Jon's Creations, LLC | Custom Rolling Ball Sculptures",
+    template: "%s | Jon's Creations, LLC",
   },
   description:
     'Handcrafted rolling ball sculptures and kinetic art by Jon Parrack. Custom marble machines, ball runs, and audiokinetic sculptures inspired by George Rhoads. One of a kind pieces for homes, offices, and businesses. Worldwide shipping.',
@@ -97,8 +97,8 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://rollingballcreations.com',
-    siteName: "Jon's Creations",
-    title: "Jon's Creations | Custom Rolling Ball Sculptures & Marble Machines",
+    siteName: "Jon's Creations, LLC",
+    title: "Jon's Creations, LLC | Custom Rolling Ball Sculptures & Marble Machines",
     description:
       'Handcrafted rolling ball sculptures, marble machines, and kinetic art by Jon Parrack. Custom ball runs inspired by George Rhoads for homes and businesses.',
     images: [
@@ -112,7 +112,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Jon's Creations | Custom Rolling Ball Sculptures & Marble Machines",
+    title: "Jon's Creations, LLC | Custom Rolling Ball Sculptures & Marble Machines",
     description:
       'Handcrafted rolling ball sculptures, marble machines, and kinetic art. Custom ball runs inspired by George Rhoads. Worldwide shipping.',
     images: ['/images/hero/DSC00397-hero.jpg'],

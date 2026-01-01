@@ -231,21 +231,21 @@ export const sculptures: Sculpture[] = [
 
 export const siteContent = {
   business: {
-    name: "Jon's Creations",
+    name: "Jon's Creations, LLC",
     tagline: 'Custom Rolling Ball Sculptures',
     slogan: 'One of a kind art for your home or business',
     artist: 'Jon Parrack',
     phone: '304-593-6412',
     address: {
-      street: '809 Viand St',
+      street: '1239 Bethel Rd',
       city: 'Point Pleasant',
       state: 'WV',
       zip: '25550',
       country: 'USA',
     },
     coordinates: {
-      lat: 38.847049,
-      lng: -82.136957,
+      lat: 38.8606,
+      lng: -82.0847,
     },
     shipping: 'Worldwide',
     stats: {
@@ -253,7 +253,7 @@ export const siteContent = {
     },
   },
   about: {
-    intro: "Jon's Creations specializes in handcrafted kinetic sculptures that utilize gravity as a fundamental design element. Each rolling ball sculpture, marble machine, and ball run is meticulously crafted by hand. The business offers both custom commissions and pre-designed pieces suitable for homes, offices, lobbies, and businesses of any size.",
+    intro: "Jon's Creations, LLC specializes in handcrafted kinetic sculptures that utilize gravity as a fundamental design element. Each rolling ball sculpture, marble machine, and ball run is meticulously crafted by hand. The business offers both custom commissions and pre-designed pieces suitable for homes, offices, lobbies, and businesses of any size.",
     customization: 'Jon works individually with clients to develop personalized pieces. Pricing depends on the framework\'s dimensions rather than a fixed rate structure, allowing flexibility for various budgets and space requirements.',
     quality: 'With over 30 handcrafted sculptures sold, the business emphasizes durability and craftsmanship. Materials include premium stainless steel, copper, and powder-coated metals, along with quality glass marbles and precision motors designed for lifetime use with minimal maintenance requirements.',
     inspiration: 'Jon\'s passion for kinetic art was ignited by the 2007 film Fracture, starring Anthony Hopkins and Ryan Gosling, which prominently featured a mesmerizing rolling ball sculpture in Hopkins\' character\'s home. That captivating piece sparked a journey into the world of marble machines and led Jon to discover George Rhoads (1926-2021), the pioneering American artist who brought rolling ball sculptures into public consciousness. Rhoads created his first ball machine in the late 1950s and went on to install his audiokinetic sculptures in airports, science museums, shopping malls, and children\'s hospitals worldwide. His philosophy that machines themselves can be works of art—with visible, understandable mechanisms that demystify how things work—continues to influence kinetic artists today. Like Rhoads, Jon creates sculptures where balls travel through carefully engineered paths of loops, spirals, ramps, and tracks, using only gravity to create captivating motion that sparks wonder in viewers of all ages.',
