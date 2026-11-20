@@ -24,7 +24,7 @@ export function YouTubeFacade({ videoId, title, isShort = false, className = '' 
   if (isShort) {
     return (
       <iframe
-        src={`https://www.youtube.com/embed/${videoId}`}
+        src={`https://www.youtube-nocookie.com/embed/${videoId}`}
         title={title}
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
@@ -36,7 +36,7 @@ export function YouTubeFacade({ videoId, title, isShort = false, className = '' 
   if (isLoaded) {
     return (
       <iframe
-        src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
+        src={`https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1`}
         title={title}
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen

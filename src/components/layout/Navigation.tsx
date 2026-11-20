@@ -36,7 +36,7 @@ export function Navigation() {
         <nav className="container-custom flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+            <div className="w-10 h-10 rounded-full bg-linear-to-br from-primary to-accent flex items-center justify-center">
               <span className="text-white font-bold text-lg">J</span>
             </div>
             <span className="text-xl font-semibold text-white group-hover:text-primary transition-colors">

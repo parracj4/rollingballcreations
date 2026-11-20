@@ -2,61 +2,58 @@
 
 import { GlassCard, GlassButton, AnimatedGradient } from '@/components/ui'
 
+export const TERMS_LAST_UPDATED = 'November 20, 2026'
+
 const termsData = [
   {
-    title: 'Acceptance of Terms',
+    title: 'About These Terms',
     content:
-      'By accessing and using this website, you accept and agree to be bound by these Terms & Conditions. If you do not agree to these terms, please do not use this website. Your continued use of this site constitutes your acceptance of any unmet accessibility standards, design choices, and all other terms herein.',
+      'This website is operated by Jon\'s Creations, LLC, a West Virginia limited liability company located at 1239 Bethel Rd, Point Pleasant, WV 25550 ("we," "us," or "our"). By using this website, submitting an inquiry, or purchasing or commissioning a sculpture, you agree to these Terms & Conditions. If you do not agree, please do not use the site.',
   },
   {
-    title: 'Website Accessibility',
+    title: 'Inquiries and Communication',
     content:
-      'This website is designed with aesthetics and user experience in mind. While we have made efforts to improve accessibility, some elements may not meet all accessibility standards. By using this website, you acknowledge and accept any accessibility limitations. If you have difficulty accessing any content, please contact us directly and we will do our best to assist you.',
+      'When you contact us, we use the information you provide to respond and to communicate about your inquiry, commission, or purchase. We aim to reply within 1-2 business days, though response times may vary during busy periods or holidays. You may ask us to stop contacting you at any time. See our Privacy Policy for details on how your information is handled.',
   },
   {
-    title: 'Information Use',
+    title: 'Custom Work',
     content:
-      'The information you provide (name, email, message) will be used solely to respond to your inquiry and communicate about potential commissions or purchases. We will not sell, share, or distribute your personal information to third parties.',
+      'Every sculpture is a one-of-a-kind, handmade piece. Pricing, payment, timelines, shipping, delivery, installation, and any returns or changes are arranged individually with each client, case by case, and confirmed directly with you before work begins. Prices shown on this website are in U.S. dollars and are for reference; listed pieces are subject to prior sale. Handmade work varies, and colors and finishes may look different on your screen.',
   },
   {
-    title: 'Commission Inquiries',
+    title: 'Safety and Care',
     content:
-      'All commission quotes are estimates and may vary based on final design specifications, materials, and complexity. A formal quote will be provided after initial consultation. Commissions require a deposit before work begins, with final payment due upon completion. We reserve the right to decline any commission inquiry or project for any reason.',
-  },
-  {
-    title: 'Response Time',
-    content:
-      'We aim to respond to all inquiries within 24-48 business hours. Response times may vary during busy periods or holidays.',
-  },
-  {
-    title: 'Communication Consent',
-    content:
-      'By providing your email address, you consent to receiving email communications related to your inquiry. You may opt out of future communications at any time.',
-  },
-  {
-    title: 'Limitation of Liability',
-    content:
-      'This website and its content are provided "as is" without warranties of any kind. We shall not be liable for any damages arising from your use of this website, including but not limited to direct, indirect, incidental, or consequential damages.',
+      'Rolling ball sculptures are works of art, not toys. They contain small balls and parts that can be a choking hazard; keep them out of reach of young children and pets, and supervise children around them. Motorized pieces should be used only with the power supply provided and kept away from water. Follow any care and operating instructions we provide. Modifying a sculpture or using it in a way it was not intended may cause damage or injury.',
   },
   {
     title: 'Intellectual Property',
     content:
-      'All content on this website, including images, text, designs, and artwork, is the property of Jon\'s Creations and is protected by copyright law. You may not reproduce, distribute, or use any content without prior written permission.',
+      'All content on this website, including photographs, videos, text, sculpture designs, and logos, is owned by Jon\'s Creations, LLC or used with permission, and is protected by copyright and other laws. You may share links to our pages, but you may not copy, reproduce, or use our content for commercial purposes without our written permission. Buying a sculpture gives you ownership of that physical piece; Jon\'s Creations, LLC keeps the copyright in its designs and may photograph and show completed work in its portfolio unless we agree otherwise in writing.',
   },
   {
-    title: 'Accuracy of Information',
+    title: 'Third-Party Services and Links',
     content:
-      'Please ensure all information provided is accurate. We are not responsible for delays or issues arising from incorrect contact information.',
+      'This website uses third-party services, including an online contact form, embedded YouTube videos, and Google Maps, and links to our social media pages. Those services are governed by their own terms and privacy policies, and we are not responsible for their content or practices.',
   },
   {
-    title: 'Age Requirement',
+    title: 'Accessibility',
     content:
-      'You must be at least 18 years old to submit a commission inquiry or make a purchase.',
+      'We want everyone to be able to use this website. If any part of the site is difficult for you to use, please call us at 304-593-6412 or reach out through our contact page, and we will help you get the information you need and work to improve the site.',
   },
   {
-    title: 'Changes to Terms',
+    title: 'Disclaimer and Limitation of Liability',
     content:
-      'We reserve the right to modify these terms at any time without prior notice. Your continued use of the website following any changes constitutes acceptance of the new terms.',
+      'This website and its content are provided "as is." To the fullest extent permitted by law, Jon\'s Creations, LLC is not liable for indirect, incidental, or consequential damages arising from your use of this website, and our total liability for any claim relating to a purchase is limited to the amount you paid for that purchase. Nothing in these terms limits any rights you have under applicable consumer protection law.',
+  },
+  {
+    title: 'Governing Law',
+    content:
+      'These terms are governed by the laws of the State of West Virginia, without regard to its conflict-of-law rules. Any dispute will be handled in the state or federal courts serving Mason County, West Virginia, unless applicable law requires otherwise. We encourage you to contact us first so we can try to resolve any concern informally.',
+  },
+  {
+    title: 'Changes to These Terms',
+    content:
+      'We may update these terms from time to time. The "Last updated" date at the top of this page shows when they last changed. Terms in effect at the time of your purchase or commission apply to that order.',
   },
 ]
 
@@ -74,8 +71,11 @@ export function TermsContent() {
               <span className="gradient-text">Conditions</span>
             </h1>
             <p className="text-text-secondary text-lg">
-              By submitting a contact form or making a purchase, you agree to
-              the following terms.
+              By using this website, submitting an inquiry, or making a
+              purchase, you agree to the following terms.
+            </p>
+            <p className="text-text-muted text-sm mt-4">
+              Last updated: {TERMS_LAST_UPDATED}
             </p>
           </div>
         </div>

@@ -150,7 +150,7 @@ export function CorporateContent() {
       <section className="py-12">
         <div className="container-custom">
           <div className="max-w-5xl mx-auto">
-            <div className="relative aspect-[16/9] rounded-3xl overflow-hidden border border-white/10">
+            <div className="relative aspect-video rounded-3xl overflow-hidden border border-white/10">
               <Image
                 src="/images/products/AB-Machine-polished-stainless.webp"
                 alt="Polished stainless steel rolling ball sculpture for corporate environments"
@@ -158,7 +158,7 @@ export function CorporateContent() {
                 sizes="(max-width: 1280px) 100vw, 1280px"
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-t from-background/60 via-transparent to-transparent" />
               <div className="absolute bottom-8 left-8 right-8">
                 <p className="text-white text-lg font-medium">
                   Polished Stainless Steel Wall Mount
@@ -194,7 +194,7 @@ export function CorporateContent() {
                     'Mounting options for floor, wall, or pedestal display',
                   ].map((item, index) => (
                     <li key={index} className="flex items-start gap-3 text-text-secondary">
-                      <span className="w-2 h-2 rounded-full bg-primary flex-shrink-0 mt-2" />
+                      <span className="w-2 h-2 rounded-full bg-primary shrink-0 mt-2" />
                       {item}
                     </li>
                   ))}
@@ -227,7 +227,7 @@ export function CorporateContent() {
                   key={index}
                   className="flex items-center gap-3 p-4 rounded-xl border border-white/10 bg-surface/30"
                 >
-                  <span className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
+                  <span className="w-2 h-2 rounded-full bg-primary shrink-0" />
                   <span className="text-text-secondary">{space}</span>
                 </div>
               ))}

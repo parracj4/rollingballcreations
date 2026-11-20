@@ -78,7 +78,7 @@ export function VideosContent() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {videos.map((video) => (
             <GlassCard key={video.id} hover={false} className="overflow-hidden">
-              <div className={video.isShort ? 'aspect-[9/16]' : 'aspect-video'}>
+              <div className={video.isShort ? 'aspect-9/16' : 'aspect-video'}>
                 <YouTubeFacade
                   videoId={video.id}
                   title={video.title}

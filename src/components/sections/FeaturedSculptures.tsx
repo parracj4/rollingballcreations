@@ -27,7 +27,7 @@ export function FeaturedSculptures() {
           {featured.map((sculpture, index) => (
             <div
               key={sculpture.id}
-              className="animate-fadeIn"
+              className="animate-fade-in"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <Link href={`/gallery/${sculpture.slug}`}>
@@ -49,7 +49,7 @@ export function FeaturedSculptures() {
                       </div>
                     )}
                     {/* Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute inset-0 bg-linear-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                     {/* Badge */}
                     <div className="absolute top-4 right-4">

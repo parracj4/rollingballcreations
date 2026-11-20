@@ -17,7 +17,7 @@ export function VideoPreview() {
         {/* Featured Video */}
         <div className="max-w-md mx-auto">
           <div className="rounded-2xl overflow-hidden border border-white/10 bg-surface/50">
-            <div className="aspect-[9/16]">
+            <div className="aspect-9/16">
               <YouTubeFacade
                 videoId="zPCd1yVWd6I"
                 title="Large Motorized Rolling Ball Sculpture"

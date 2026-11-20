@@ -26,13 +26,8 @@ export function LocalBusinessJsonLd() {
       longitude: business.coordinates.lng,
     },
     image: 'https://rollingballcreations.com/images/hero/DSC00397-hero.jpg',
+    logo: 'https://rollingballcreations.com/logo.png',
     priceRange: '$375 - $10,000+',
-    openingHoursSpecification: {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-      opens: '09:00',
-      closes: '17:00',
-    },
     founder: {
       '@type': 'Person',
       name: 'Jon Parrack',
@@ -167,12 +162,6 @@ export function WebsiteJsonLd() {
     url: 'https://rollingballcreations.com',
     description:
       'Handcrafted rolling ball sculptures and kinetic art. Custom marble machines for your home or business.',
-    potentialAction: {
-      '@type': 'SearchAction',
-      target:
-        'https://rollingballcreations.com/gallery?search={search_term_string}',
-      'query-input': 'required name=search_term_string',
-    },
   }
 
   return (

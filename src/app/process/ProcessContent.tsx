@@ -26,7 +26,7 @@ export function ProcessContent() {
 
       <section className="container-custom">
         <div className="relative">
-          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-primary/50 via-accent/50 to-primary/50 hidden sm:block" />
+          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-linear-to-b from-primary/50 via-accent/50 to-primary/50 hidden sm:block" />
 
           {siteContent.process.map((step, index) => (
             <div
@@ -61,7 +61,7 @@ export function ProcessContent() {
             { title: 'Powder Coating', description: 'Custom colors available to match any space.', color: 'from-primary to-accent' },
           ].map((option, index) => (
             <GlassCard key={index} className="h-full text-center">
-              <div className={`w-16 h-16 rounded-full bg-gradient-to-br ${option.color} mx-auto mb-4`} />
+              <div className={`w-16 h-16 rounded-full bg-linear-to-br ${option.color} mx-auto mb-4`} />
               <h3 className="text-white font-semibold text-lg mb-2">{option.title}</h3>
               <p className="text-text-muted text-sm">{option.description}</p>
             </GlassCard>

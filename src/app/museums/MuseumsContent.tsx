@@ -183,7 +183,7 @@ export function MuseumsContent() {
       <section className="py-12">
         <div className="container-custom">
           <div className="max-w-5xl mx-auto">
-            <div className="relative aspect-[16/9] rounded-3xl overflow-hidden border border-white/10">
+            <div className="relative aspect-video rounded-3xl overflow-hidden border border-white/10">
               <Image
                 src="/images/products/DSC00389-large-motorized.webp"
                 alt="Large motorized rolling ball sculpture for museum exhibit installation"
@@ -191,7 +191,7 @@ export function MuseumsContent() {
                 sizes="(max-width: 1280px) 100vw, 1280px"
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-t from-background/60 via-transparent to-transparent" />
               <div className="absolute bottom-8 left-8 right-8">
                 <p className="text-white text-lg font-medium">
                   Large Motorized Exhibition Piece
@@ -262,7 +262,7 @@ export function MuseumsContent() {
                   key={index}
                   className="flex items-center gap-3 p-4 rounded-xl border border-white/10 bg-surface/30"
                 >
-                  <span className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
+                  <span className="w-2 h-2 rounded-full bg-primary shrink-0" />
                   <span className="text-text-secondary">{venue}</span>
                 </div>
               ))}
