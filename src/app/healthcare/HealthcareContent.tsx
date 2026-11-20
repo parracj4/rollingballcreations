@@ -147,7 +147,7 @@ export function HealthcareContent() {
       <section className="py-12">
         <div className="container-custom">
           <div className="max-w-5xl mx-auto">
-            <div className="relative aspect-[16/9] rounded-3xl overflow-hidden border border-white/10">
+            <div className="relative aspect-video rounded-3xl overflow-hidden border border-white/10">
               <Image
                 src="/images/products/DSC00389-large-motorized.webp"
                 alt="Large motorized rolling ball sculpture suitable for hospital lobbies"
@@ -155,7 +155,7 @@ export function HealthcareContent() {
                 sizes="(max-width: 1280px) 100vw, 1280px"
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-t from-background/60 via-transparent to-transparent" />
               <div className="absolute bottom-8 left-8 right-8">
                 <p className="text-white text-lg font-medium">
                   Motorized Floor Sculpture
@@ -209,7 +209,7 @@ export function HealthcareContent() {
                   key={index}
                   className="flex items-center gap-3 p-4 rounded-xl border border-white/10 bg-surface/30"
                 >
-                  <span className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
+                  <span className="w-2 h-2 rounded-full bg-primary shrink-0" />
                   <span className="text-text-secondary">{location}</span>
                 </div>
               ))}
@@ -228,7 +228,7 @@ export function HealthcareContent() {
               </h2>
               <div className="space-y-8">
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold flex-shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold shrink-0">
                     1
                   </div>
                   <div>
@@ -240,7 +240,7 @@ export function HealthcareContent() {
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold flex-shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold shrink-0">
                     2
                   </div>
                   <div>
@@ -252,7 +252,7 @@ export function HealthcareContent() {
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold flex-shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold shrink-0">
                     3
                   </div>
                   <div>
@@ -264,7 +264,7 @@ export function HealthcareContent() {
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold flex-shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold shrink-0">
                     4
                   </div>
                   <div>

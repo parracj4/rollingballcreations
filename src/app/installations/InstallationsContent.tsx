@@ -99,7 +99,7 @@ export function InstallationsContent() {
               <Link key={index} href={type.href} className="group">
                 <div className="glass rounded-3xl overflow-hidden h-full flex flex-col transition-all duration-300 group-hover:border-primary/50">
                   {/* Image */}
-                  <div className="relative aspect-[4/3] overflow-hidden">
+                  <div className="relative aspect-4/3 overflow-hidden">
                     <Image
                       src={type.image}
                       alt={type.title}
@@ -107,7 +107,7 @@ export function InstallationsContent() {
                       sizes="(max-width: 1024px) 100vw, 33vw"
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
+                    <div className="absolute inset-0 bg-linear-to-t from-background via-background/20 to-transparent" />
                   </div>
 
                   {/* Content */}
@@ -157,7 +157,7 @@ export function InstallationsContent() {
               </p>
             </div>
             <div className="rounded-3xl overflow-hidden border border-white/10 bg-surface/50">
-              <div className="aspect-[9/16] md:aspect-video max-h-[500px] mx-auto">
+              <div className="aspect-9/16 md:aspect-video max-h-[500px] mx-auto">
                 <YouTubeFacade
                   videoId="zPCd1yVWd6I"
                   title="Large Motorized Rolling Ball Sculpture"

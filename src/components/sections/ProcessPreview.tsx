@@ -28,7 +28,7 @@ export function ProcessPreview() {
             {steps.map((step, index) => (
               <div
                 key={step.number}
-                className="animate-fadeIn"
+                className="animate-fade-in"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <GlassCard className="text-center h-full relative">

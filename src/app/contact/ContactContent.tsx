@@ -83,7 +83,7 @@ export function ContactContent() {
               <ul className="space-y-3">
                 {['Response within 24-48 hours', 'Free consultation for custom commissions', 'Detailed quotes based on your specifications', 'Photos and updates throughout the process'].map((item, index) => (
                   <li key={index} className="flex items-center gap-3 text-text-secondary">
-                    <span className="w-2 h-2 rounded-full bg-success flex-shrink-0" />{item}
+                    <span className="w-2 h-2 rounded-full bg-success shrink-0" />{item}
                   </li>
                 ))}
               </ul>

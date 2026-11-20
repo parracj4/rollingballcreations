@@ -33,7 +33,7 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+              <div className="w-10 h-10 rounded-full bg-linear-to-br from-primary to-accent flex items-center justify-center">
                 <span className="text-white font-bold text-lg">J</span>
               </div>
               <span className="text-xl font-semibold text-white">
@@ -149,7 +149,7 @@ export function Footer() {
         <div className="mt-12 pt-8 border-t border-white/10">
           <div className="rounded-2xl overflow-hidden border border-white/10">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3114.8!2d-82.0847!3d38.8606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s1239+Bethel+Rd%2C+Point+Pleasant%2C+WV+25550!5e0!3m2!1sen!2sus!4v1"
+              src="https://maps.google.com/maps?q=1239+Bethel+Rd,+Point+Pleasant,+WV+25550&z=13&output=embed"
               width="100%"
               height="250"
               style={{ border: 0 }}

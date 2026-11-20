@@ -15,7 +15,7 @@ export function SculptureCard({ sculpture, index = 0 }: SculptureCardProps) {
 
   return (
     <div
-      className="animate-fadeIn"
+      className="animate-fade-in"
       style={{ animationDelay: `${index * 50}ms` }}
     >
       <Link href={`/gallery/${sculpture.slug}`}>
@@ -41,7 +41,7 @@ export function SculptureCard({ sculpture, index = 0 }: SculptureCardProps) {
             )}
 
             {/* Overlay on hover */}
-            <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="absolute inset-0 bg-linear-to-t from-background/90 via-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
             {/* Badge */}
             <div className="absolute top-4 right-4">
